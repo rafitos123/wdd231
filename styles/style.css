@@ -1,0 +1,207 @@
+
+* {
+    font-family: "Roboto", system-ui;
+	font-weight: 400;
+  	font-style: normal;
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+	color: white;
+    background-color: #0b2545;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav {
+	background-color: #13315c;
+	width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration:overline;
+	color: aqua;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card {
+	background-color: #eef4ed;
+	border: 1px solid #ccc;
+	max-width: 600px;
+	margin: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: grid;
+	grid-template-rows: auto;
+	gap: 1rem;
+	text-align: justify;
+	
+	
+}
+
+.card ul {
+	margin: 0 auto;
+	padding-left: 20px;
+	width: 100%;
+	gap: 0.5rem;
+	list-style-type: disc; 
+	list-style-position: inside; 
+	
+}
+.card ul li {
+	text-align: left;
+	padding: 0.5rem 0;
+}
+
+.card p, .card img {
+	padding-left: 20px; 
+	padding-bottom: 20px;
+}
+
+h2 {
+	color: white;
+	background-color: #134074;
+	text-align: center;
+	grid-column: 1/5;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+footer {
+	background-color: #13315c;
+	color: white;
+	text-align: center;
+	
+}
+
+  
+  div {
+	margin: 20px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+  }
+
+.spanColor{
+	color: #134074;
+}
+
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+
+	img {
+		width: 200px;
+	}
+	
+	main {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns:  1fr 1fr;
+		margin-left: 100px;
+		justify-content: center;
+	   
+	}
+	
+	h2 {
+		color: white;
+		background-color: #134074;
+		text-align: center;
+		grid-column: 1/5;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	  }
+	
+	.card {
+		background-color: #eef4ed;
+		border: 1px solid #ccc;
+		max-width: 600px;
+		margin: 20px 100px auto;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		display: grid;
+		grid-template-rows: auto;
+		gap: 1rem;
+		text-align: justify;
+		
+		
+	}
+	
+	.card p, .card img {
+		padding-left: 20px; 
+		padding-bottom: 20px;
+	}
+	
+	
+	
+	.card ul {
+		margin: 0 auto;
+		padding-left: 20px;
+		width: 100%;
+		gap: 0.5rem;
+		list-style-type: disc; 
+		list-style-position: inside; 
+		
+	}
+	.card ul li {
+		text-align: left;
+		padding: 0.5rem 0;
+	}
+	
+	footer {
+		color: white;
+		background-color: #13315c;
+		text-align: center;
+		
+	}
+	
+	
+
+}
+
+
