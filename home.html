@@ -19,12 +19,14 @@
     <header>
         <img src="images/me.webp" alt="Rafael Antunes">
         <h1>Rafael Henrique Antunes</h1>
+
+        <a id="menu" href="#"></a>
         <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/rafaelhantunes/?locale=en_US">LinkedIn</a></li>
-                <li><a href="https://byui.instructure.com/.">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p5-p25#p5">Scripture</a></li>
-                <li><a href="project-home.html">Final Project</a></li>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/rafitos123">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/rafaelhantunes/?locale=en_US">Linkedin</a></li>
             </ul>
         </nav>
     </header>
@@ -32,23 +34,27 @@
     <main>
         <section class="card">
             <h2>Course Work</h2>
-           <li><ul></ul></li>
+           
         </section>
         <section class="card">
             <h2>Mogi Mirim, Brazil</h2>
-            <ul>
-                <li><a href="https://developer.microsoft.com/en-us/">Microsoft Developer</a></li>
-                <li><a href="https://www.w3schools.com/">W3schools</a></li>
-                <li><a href="https://www.alura.com.br/">Alura</a></li>
-            </ul>
+            <figure>
+                <img src="images/matriz.webp" alt="Main Square" />
+                <figcaption>Main Square</figcaption>
+              </figure>
         </section>
         <section class="card">
             <h2>Web And Computer Programming Certificate</h2>
-            <ul>
-                <li><a href="https://developer.microsoft.com/en-us/">Microsoft Developer</a></li>
-                <li><a href="https://www.w3schools.com/">W3schools</a></li>
-                <li><a href="https://www.alura.com.br/">Aura</a></li>
-            </ul>
+            <div class="container">
+                
+                <button onclick="AllCourses()">All Courses</button>
+                <button onclick="CSECourses()">CSE Courses</button>
+                <button onclick="WDDCourses()">WDD Courses</button>
+                
+            </div>
+            <p id="totalCredits"></p>
+            <div id="courseList"></div>
+                  
         </section>
     </main>
     <footer>
