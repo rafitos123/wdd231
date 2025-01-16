@@ -9,44 +9,51 @@ async function getMembers() {
 
 }
 
-    const displayLinks = (companies) => {
-        companies.forEach(company => {
-            const list = document.createElement("ul");
-            const name = document.createElement("li");
-            const Url = document.createElement("p");
-            const Phone = document.createElement("p");
-            const Adress = document.createElement("p");
-            const Membership = document.createElement("p");
-            const rate = document.createElement("p");
-            const image = document.createElement('img');
+const displayLinks = (companies) => {
+    companies.forEach(company => {
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-            image.setAttribute('src', company.image);
-            image.setAttribute('alt', `The ${company.name}`); 
-            image.setAttribute('loading', 'lazy');
-            image.setAttribute('width', '100');
-            image.setAttribute('height', '100');
+        const container = document.createElement("div");
+        container.classList.add("container");
 
-            name.textContent = company.name;
-            Url.textContent = company.Url;
-            Adress.textContent = company.Adress;
-            Phone.textContent = company.Phone;
-            Membership.textContent = company.Membership;
-            rate.textContent = company.rate;
-            
+        const image = document.createElement('img');
+        const name = document.createElement("h2");
+        const Url = document.createElement("p");
+        const Phone = document.createElement("p");
+        const Adress = document.createElement("p");
+        const Membership = document.createElement("p");
+        const email = document.createElement("p");
 
-            list.appendChild(image);
-            list.appendChild(name);
-            list.appendChild(Url);
-            list.appendChild(Adress);
-            list.appendChild(Phone);
-            list.appendChild(Membership);
-            list.appendChild(rate);
-            cards.appendChild(list);
-        });
+        image.setAttribute('src', company.image);
+        image.setAttribute('alt', `The ${company.name}`);
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('width', '100');
+        image.setAttribute('height', '100');
+
+        name.textContent = company.name;
+        Url.textContent = `Website: ${company.Url}`;
+        Adress.textContent = `Address: ${company.Adress}`;
+        Phone.textContent = `Phone: ${company.Phone}`;
+        Membership.textContent = `Membership: ${company.Membership}`;
+        email.textContent = `Email: ${company.email}`;
+
+        
+        container.appendChild(image);
+        container.appendChild(name);
+        container.appendChild(Url);
+        container.appendChild(Adress);
+        container.appendChild(Phone);
+        container.appendChild(Membership);
+        container.appendChild(email);
+
+        
+        card.appendChild(container);
+        cards.appendChild(card);
+    });
+}
 
 
-
-    }
 
 
 getMembers()
