@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Rafael Henrique Antunes">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="icon" type="image/png" sizes="16x16"  href="/images/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/base.css">  <link rel="icon" type="image/png" sizes="16x16"  href="/images/favicon-16x16.png">
+    <meta property="fb:000" content="000" />
+    <meta property="og:title" content="Mogi Mirim - Chamber of Commerce" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="images/mogi.webp" />
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Document</title>
 </head>
 <body>
@@ -29,17 +32,25 @@
         </nav>
     </header>
     <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/mogi.webp" media="(min-width: 1000px)">
+                <source srcset="images/mogi.webp" media="(min-width: 550px)">
+                <img src="images/mogi.webp" alt="Matriz Square" >
+            </picture>
+        </div>
         <div id="events">
             <div class="card">
                 <h1>Events</h1>
-                <p>Festival of Flowers and Colors: An annual event where the city transforms into a sea of flowers and colors. Public and private gardens compete for the title of "Most Beautiful Garden," and there are parades of flower-decorated floats, gardening workshops, and floral art exhibitions.</p>
+                <p><span style="font-weight: bold;">Festival of Flowers and Colors:</span> An annual event where the city transforms into a sea of flowers and colors. Public and private gardens compete for the title of "Most Beautiful Garden," and there are parades of flower-decorated floats, gardening workshops, and floral art exhibitions.</p>
             </div>
             <div class="card">
                 <h1>Weather</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ab esse officiis. Illum accusantium deleniti doloribus eos in laudantium cupiditate fugiat alias facilis id aperiam, error sed, tempora eum qui officia debitis veritatis repudiandae! Explicabo quam sint, facilis culpa praesentium illum repellendus incidunt laudantium qui nobis autem reiciendis odio soluta.</p>
+                <div id="current-weather"></div>
             </div>
             <div class="card">
                 <h1>Weather Forecast</h1>
+                <div id="weather-forecast"></div>
             </div>
 
           
@@ -47,10 +58,14 @@
         <div>
            <div id="directory"></div>
         </div>
+        
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> 🍁 Rafael Henrique Antunes 🍁 Brazil</p>
-        <p id="lastModified"></p>
+        <div>
+            <p>&copy;<span id="currentyear"></span> 🍁 Rafael Henrique Antunes 🍁 Brazil</p>
+            <p id="lastModified"></p>
+        </div>
+       
     </footer>
     <script src="scripts/script.js"></script>
 </body>

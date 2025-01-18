@@ -1,3 +1,5 @@
+
+//display array members
 const linksURL = "https://rafitos123.github.io/wdd231/chamber/data/members.json";
 const cards = document.querySelector('#directory');
 //get results
@@ -55,6 +57,8 @@ const displayLinks = (companies) => {
 
 getMembers()
 
+
+
 //current year
 const today = new Date();
 
@@ -69,34 +73,71 @@ const lastDate = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digi
 last.innerHTML = `Last Modification: <span>${oLastModif.toLocaleString('en-US', lastDate)}</span>`;
 
 
-// Seleciona os elementos necessários
-const mainnav = document.querySelector('.navigation'); // Menu de navegação
-const hambutton = document.querySelector('#menu'); // Botão do menu (hambúrguer)
+//Menu hamburguer
+const mainnav = document.querySelector('.navigation'); 
+const hambutton = document.querySelector('#menu'); 
 
-// Adiciona o evento de clique ao botão do menu
+
 hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show'); // Alterna a classe .show no menu
-    hambutton.classList.toggle('active'); // Alterna a aparência do botão
+    mainnav.classList.toggle('show'); 
+    hambutton.classList.toggle('active'); 
 });
 
 
 
-//Temperature and WindChill
-let temperature = 20;
-let windSpeed = 17;
+//weather
+const apiKey = "29dbdb5b52394d31fb0823709d986fb3"; 
+const city = "Mogi Mirim"; 
+const units = "metric";
 
+// URLs APIs
+const currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
 
-const calculateWindchill = (temperature, windSpeed) => { return 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);};
-let windchill;
+// Search API data
+async function fetchWeatherData() {
+  try {
+    //current weather
+    const currentWeatherResponse = await fetch(currentWeatherURL);
+    const currentWeatherData = await currentWeatherResponse.json();
+    displayCurrentWeather(currentWeatherData);
 
-
-if (temperature > 10) {
-    windchill = "N/A";
-} else {
-    windchill = calculateWindchill(temperature, windSpeed).toFixed(2);
+    //forecast
+    const forecastResponse = await fetch(forecastURL);
+    const forecastData = await forecastResponse.json();
+    displayForecast(forecastData);
+  } catch (error) {
+    console.error("Erro ao buscar os dados:", error);
+  }
 }
 
+//current weather
+function displayCurrentWeather(data) {
+  const { main, weather, name } = data;
+  const weatherHTML = `
+   <img src="https://openweathermap.org/img/wn/${weather[0].icon}@2x.png" alt="${weather[0].description}">
+    <p style="font-weight: bold;">${name}</p>
+    <p><strong>Temperature:</strong> ${main.temp}°C</p>
+    <p><strong>Feels Like:</strong> ${main.feels_like}°C</p>
+    <p><strong>Weather:</strong> ${weather[0].description}</p>
+   
+  `;
+  document.getElementById("current-weather").innerHTML = weatherHTML;
+}
 
-document.getElementById("windchill").innerText = windchill + "°C";
-document.getElementById("temperature").innerText = temperature + "°C";
-document.getElementById("wind").innerText = windSpeed + " km/h";
+//forecast
+function displayForecast(data) {
+    const forecastHTML = data.list
+      .slice(0, 3) //three days forecast
+      .map((forecast) => {
+        const date = new Date(forecast.dt * 1000); 
+        const dayName = date.toLocaleDateString("en-US", { weekday: "long" }); 
+        return `
+          <p>${dayName}: <span style="font-weight: bold;">${forecast.main.temp}°C</span> </p>
+        `;
+      })
+      .join("");
+      document.getElementById("weather-forecast").innerHTML = `${forecastHTML}`;
+  }
+
+fetchWeatherData();
