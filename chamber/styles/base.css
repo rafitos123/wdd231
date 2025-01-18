@@ -99,6 +99,7 @@ nav .navigation {
   text-align: center;
   padding: 1rem;
   text-decoration: none;
+  
 }
 
 .navigation a:hover {
@@ -179,7 +180,9 @@ footer {
 
 }
 
-
+span {
+  font-weight: bold;
+}
 
 @media (min-width: 768px) {
   #menu {
@@ -201,6 +204,7 @@ footer {
   .navigation a {
       padding: 0.5rem 1rem;
       color: white;
+      
   }
 
   .navigation a:hover {

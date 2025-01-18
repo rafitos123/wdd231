@@ -116,7 +116,7 @@ function displayCurrentWeather(data) {
   const { main, weather, name } = data;
   const weatherHTML = `
    <img src="https://openweathermap.org/img/wn/${weather[0].icon}@2x.png" alt="${weather[0].description}">
-    <p style="font-weight: bold;">${name}</p>
+    <p><span>${name}</span></p>
     <p><strong>Temperature:</strong> ${main.temp}°C</p>
     <p><strong>Feels Like:</strong> ${main.feels_like}°C</p>
     <p><strong>Weather:</strong> ${weather[0].description}</p>
@@ -133,7 +133,7 @@ function displayForecast(data) {
         const date = new Date(forecast.dt * 1000); 
         const dayName = date.toLocaleDateString("en-US", { weekday: "long" }); 
         return `
-          <p>${dayName}: <span style="font-weight: bold;">${forecast.main.temp}°C</span> </p>
+          <p>${dayName}: <span>${forecast.main.temp}°C</span> </p>
         `;
       })
       .join("");
