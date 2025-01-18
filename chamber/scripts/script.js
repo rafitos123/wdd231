@@ -78,3 +78,25 @@ hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show'); // Alterna a classe .show no menu
     hambutton.classList.toggle('active'); // Alterna a aparência do botão
 });
+
+
+
+//Temperature and WindChill
+let temperature = 20;
+let windSpeed = 17;
+
+
+const calculateWindchill = (temperature, windSpeed) => { return 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);};
+let windchill;
+
+
+if (temperature > 10) {
+    windchill = "N/A";
+} else {
+    windchill = calculateWindchill(temperature, windSpeed).toFixed(2);
+}
+
+
+document.getElementById("windchill").innerText = windchill + "°C";
+document.getElementById("temperature").innerText = temperature + "°C";
+document.getElementById("wind").innerText = windSpeed + " km/h";
