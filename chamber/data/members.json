@@ -1,73 +1,31 @@
 {
     "companies": [
         {
-            "name":"IceGurt",
+            "name": "IceGurt",
             "Adress": "AV 7 de Setembro, 245",
             "Phone": "(41) 89545455",
-            "Url":"www.icegurt.com",
-            "image":"https://static.vecteezy.com/system/resources/previews/000/653/544/original/ice-cream-icon-vector.jpg",
-            "Membership":"Level: bronze",
-            "email":"icegurt@outlook.com"
+            "Url": "www.icegurt.com",
+            "image": "https://static.vecteezy.com/system/resources/previews/000/653/544/original/ice-cream-icon-vector.jpg",
+            "Membership": "Level: bronze",
+            "email": "icegurt@outlook.com"
         },
-       
         {
-            "name":"Car Speed",
+            "name": "Car Speed",
             "Adress": "AV 7 de Setembro, 2452",
             "Phone": "(41) 55488555",
-            "Url":"www.carspeed.com",
-            "image":"https://th.bing.com/th/id/R.56924e03f0352cfcf71a6fdd0974fe34?rik=IVBoQBKsuDEhBQ&pid=ImgRaw&r=0",
-            "Membership":"Level: gold",
-            "email":"carspeed@gmail.com"
+            "Url": "www.carspeed.com",
+            "image": "https://th.bing.com/th/id/R.56924e03f0352cfcf71a6fdd0974fe34?rik=IVBoQBKsuDEhBQ&pid=ImgRaw&r=0",
+            "Membership": "Level: gold",
+            "email": "carspeed@gmail.com"
         },
-
         {
-            "name":"Stay safe",
+            "name": "Stay safe",
             "Adress": "AV Iguaçu, 122",
             "Phone": "(41) 65918555",
-            "Url":"www.staysafe.com",
-            "image":"https://thumbs.dreamstime.com/b/shield-modern-house-icon-over-blue-background-colorful-line-design-vector-illustration-shield-house-design-120519405.jpg",
-            "Membership":"Level: gold",
-            "email":"stay@safe.com"
-        },
-
-        {
-            "name":"Hear you",
-            "Adress": "AV Gertulio Vargas, 1524",
-            "Phone": "(41) 59954435",
-            "Url":"www.hearyou.com",
-            "image":"https://th.bing.com/th/id/OIP.UbAFFn5rVyFODK52oUSOVQAAAA?w=257&h=256&rs=1&pid=ImgDetMain",
-            "Membership":"Level: silver",
-            "email":"hearyou@hotmail.com"
-        },
-
-        {
-            "name":"Monkey Cloth",
-            "Adress": "AV Gertulio Vargas, 54",
-            "Phone": "(41) 12322435",
-            "Url":"www.monkeycloth.com",
-            "image":"https://th.bing.com/th/id/R.74f59ddb505f9040140a7dc9886f1ab2?rik=387XCeLLDbezoA&pid=ImgRaw&r=0",
-            "Membership":"Level: silver",
-            "email":"cloth@monkey.com"
-        },
-       
-        {
-            "name":"Army Nation",
-            "Adress": "AV Pedro Botesi, 3443",
-            "Phone": "(41) 92929924",
-            "Url":"www.armynation.com",
-            "image":"https://th.bing.com/th/id/OIP.5uo-77IcyVHQzBtcqbbdNQHaHa?rs=1&pid=ImgDetMain",
-            "Membership":"Level: bronze",
-            "email":"army@nation.com"
-        },
-
-        {
-            "name":"tech knowledge",
-            "Adress": "AV Rodrigues Alves, 43",
-            "Phone": "(41) 92929924",
-            "Url":"www.armynation.com",
-            "image":"https://image.freepik.com/vetores-gratis/design-de-smartphone_24911-39988.jpg",
-            "Membership":"Level: gold",
-            "email":"techknowledge@hotmail.com"
+            "Url": "www.staysafe.com",
+            "image": "https://thumbs.dreamstime.com/b/shield-modern-house-icon-over-blue-background-colorful-line-design-vector-illustration-shield-house-design-120519405.jpg",
+            "Membership": "Level: gold",
+            "email": "stay@safe.com"
         }
     ]
 }
