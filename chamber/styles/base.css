@@ -114,7 +114,12 @@ nav .navigation {
 
 #events {
   display: grid;
-  grid-template-columns: auto
+  grid-template-columns: auto;
+  margin: 20px;
+}
+
+#events p {
+  margin: 20px;
 }
 
 .card {
@@ -185,6 +190,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+  }
+
+  #events p {
+    margin: 20px;
   }
 }
 
