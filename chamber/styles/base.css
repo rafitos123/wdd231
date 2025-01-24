@@ -24,7 +24,7 @@ main {
 
 header {
   color: white;
-  background-color: #006D77;
+  background-color: #005b64;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   display: flex;
@@ -143,7 +143,7 @@ nav .navigation {
 }
 
 .card h1 {
-  background-color: #006D77;
+  background-color: #005b64;
   color: white;
   line-height: 1.5rem; 
   text-align: center; 
@@ -173,7 +173,7 @@ nav .navigation {
 
 
 footer {
-  background-color: #006D77;
+  background-color: #005b64;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -182,6 +182,33 @@ footer {
 
 span {
   font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  color: black;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  top: 50%;
+  border-radius: 10%;
 }
 
 @media (min-width: 768px) {
@@ -230,7 +257,7 @@ span {
   }
 
   footer {
-    background-color: #006D77;
+    background-color: #005b64;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -240,6 +267,39 @@ span {
 
   footer div {
     margin: 10px;
+  }
+
+  .hero h1 {
+    position: absolute;
+    top: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    font-size: 60px;
+    padding-left: 60px;
+  }
+  
+  .hero img {
+  opacity: 0.4
+  }
+  
+  .hero {
+    background-color: black;
+  }
+  
+  .button {
+    background-color: #04AA6D;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 22%;
+    border-radius: 10%;
   }
 }
 
