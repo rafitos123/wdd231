@@ -2,15 +2,25 @@
 //display array members
 const linksURL = "https://rafitos123.github.io/wdd231/chamber/data/members.json";
 const cards = document.querySelector('#directory');
-//get results
+
+
 async function getMembers() {
     const response = await fetch(linksURL);
     const data = await response.json();
     console.table(data.companies);
-    displayLinks(data.companies);
 
+    //select 3 ramdon companies
+    const randomCompanies = getRandomCompanies(data.companies, 3);
+    displayLinks(randomCompanies);
 }
 
+// get 3 random companies function
+function getRandomCompanies(companies, count) {
+    const CompanyRandom = companies.sort(() => 0.5 - Math.random()); 
+    return CompanyRandom.slice(0, count);
+}
+
+//show companies
 const displayLinks = (companies) => {
     companies.forEach(company => {
         const card = document.createElement("div");
@@ -40,7 +50,6 @@ const displayLinks = (companies) => {
         Membership.textContent = `Membership: ${company.Membership}`;
         email.textContent = `Email: ${company.email}`;
 
-        
         container.appendChild(image);
         container.appendChild(name);
         container.appendChild(Url);
@@ -49,13 +58,13 @@ const displayLinks = (companies) => {
         container.appendChild(Membership);
         container.appendChild(email);
 
-        
         card.appendChild(container);
         cards.appendChild(card);
     });
 }
 
-getMembers()
+getMembers();
+
 
 
 
