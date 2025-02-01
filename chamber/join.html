@@ -49,22 +49,22 @@
                <div>
                 <form method="GET" action="thankyou.html">
                     <label>First Name</label>
-                    <input type="text"  name="First Name" title="First Name" required autocomplete="given-name">
+                    <input type="text"  name="First" title="First Name" required autocomplete="given-name">
 
                     <label>Last Name</label>
-                    <input type="text"  name="Last Name" title="Last Name" required autocomplete="family-name">
+                    <input type="text"  name="Last" title="Last Name" required autocomplete="family-name">
 
                     <label>Organizational Title</label>
-                    <input type="text" name="Organizational Title" required autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" title="Organizational Title">
+                    <input type="text" name="OTitle" required autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" title="Organizational Title">
 
                     <label>E-mail</label>
                     <input type="email" name="E-mail" title="E-mail" required placeholder="example@gmail.com" autocomplete="email">
 
                     <label>Mobile Phone</label>
-                    <input type="tel" name="Mobile Phone" title="Phone Number" required autocomplete="tel">
+                    <input type="tel" name="phone" title="Phone Number" required autocomplete="tel">
 
                     <label>Business/organization's Name</label>
-                    <input type="text" name="Business/organization's Name" title="Organizational Name" required autocomplete="organization">
+                    <input type="text" name="business" title="Organizational Name" required autocomplete="organization">
                 
                     <label >Membership Level</label>
                     <select  name="Membership">
@@ -76,11 +76,8 @@
                     </select>
                     <label>Business/organization's Description</label>
                     <textarea name="Description" title="Business Description"></textarea>
-                    <input type="hidden" id="timestamp" name="You joined at">
+                    <input type="hidden" id="timestamp" name="timestamp">
                     <input type="submit" value="Join">
-                    <div id="loading-overlay" class="hidden">
-                        <div class="spinner"></div>
-                    </div>
                   </form>
                </div>
                

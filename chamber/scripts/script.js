@@ -172,63 +172,55 @@ document.querySelectorAll('.close-button').forEach(button => {
 });
 
 //timestamp
+// Preencher o campo de timestamp
 document.addEventListener("DOMContentLoaded", function() {
   var timestampField = document.getElementById("timestamp");
-  var currentTimestamp = new Date().toLocaleString('en-US', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: true
-  });
-  timestampField.value = currentTimestamp;
+  if (timestampField) {
+    var currentTimestamp = new Date().toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hour12: true
+    });
+    timestampField.value = currentTimestamp;
+  } else {
+    console.error("Element with ID 'timestamp' not found.");
+  }
 });
 
-//thank you page
-document.addEventListener("DOMContentLoaded", function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const formDataDiv = document.getElementById("form-data");
-  const requiredFields = ["First Name", "Last Name", "Organizational Title", "Mobile Phone", "E-mail", "Business/organization's Name", "You joined at"];
+// Exibir os dados na página de agradecimento
+const currentUrl = window.location.href;
+const everything = currentUrl.split('?');
 
-  let formDataHTML = "<h2>Your Data</h2><ul><br>";
-  urlParams.forEach((value, key) => {
-    if (requiredFields.includes(key)) {
-      formDataHTML += `<li><span>${key}:</span> ${value}</li>`;
-    }
-      
+let formData = everything[1].split('&');
+
+function show(cup) {
+  let result = "";
+  formData.forEach((element) => {
+      if (element.startsWith(cup)) {
+          result = decodeURIComponent(element.split('=')[1].replace(/\+/g, ' '));
+      } 
   });
-  formDataHTML += "</ul>";
+  return(result);
+}
 
-  formDataDiv.innerHTML = formDataHTML;
-});
+const showInfo = document.querySelector("#form-data");
+if (showInfo) {
+  showInfo.innerHTML = `
+  <h2>Your Data</h2><br>
+  <p><span>First Name:</span> ${show("First")}</p>
+  <p><span>Last Name:</span> ${show("Last")}</p>
+  <p><span>Organizational Title:</span> ${show("OTitle")}</p>
+  <p><span>Mobile Phone:</span> ${show("phone")}</p>
+  <p><span>E-mail:</span> ${show("E-mail")}</p>
+  <p><span>Business/organization's Name:</span> ${show("business")}</p>
+  <p><span>You joined at:</span> ${show("timestamp")}</p>
+  `;
+} else {
+  console.error("Element with ID 'form-data' not found.");
+}
 
-
-//spinner 
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector("form");
-  const loadingOverlay = document.getElementById("loading-overlay");
-
-  //orvaley hidden
-  loadingOverlay.style.display = "none";  
-
-  form.addEventListener("submit", function(event) {
-      event.preventDefault(); //stop form submission
-
-      //if invalid form, do nothing
-      if (!form.checkValidity()) {
-          return;
-      }
-
-      //show overlay spinner before sending the form
-      loadingOverlay.style.display = "flex";
-
-      //simulate a 2 second loading time
-      setTimeout(() => {
-          loadingOverlay.style.display = "none"; //hide overlay
-          form.submit(); //send form
-      }, 2000);
-  });
-});

@@ -273,8 +273,8 @@ input[type=submit] {
   margin: auto;
 }
 
-#form-data li{
-  list-style: none;
+#form-data h2{
+  text-align: center;
 }
 
 form {
@@ -351,41 +351,7 @@ dialog {
   text-align: justify;
 }
 
-/* spinner */
-/* Oculta o spinner por padrão */
-.hidden {
-  display: none;
-}
 
-/* Fundo escuro transparente cobrindo toda a tela */
-#loading-overlay {
-  display: none; /* Garante que o overlay inicie oculto */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* O próprio spinner */
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgb(255, 255, 255);
-  border-top-color: rgb(54, 135, 233);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* Animação de rotação */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 @media (min-width: 768px) {
   #menu {
