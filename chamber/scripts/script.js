@@ -150,3 +150,85 @@ function displayForecast(data) {
   }
 
 fetchWeatherData();
+
+//MODALS
+const modal = document.querySelector("#modal");
+const openModal = document.querySelector(".open-button");
+const closeModal = document.querySelector(".close-button");
+
+document.querySelectorAll('.open-button').forEach(button => {
+  button.addEventListener('click', () => {
+      const modalId = button.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      modal.showModal();
+  });
+});
+
+document.querySelectorAll('.close-button').forEach(button => {
+  button.addEventListener('click', () => {
+      const modal = button.closest('dialog');
+      modal.close();
+  });
+});
+
+//timestamp
+document.addEventListener("DOMContentLoaded", function() {
+  var timestampField = document.getElementById("timestamp");
+  var currentTimestamp = new Date().toLocaleString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: true
+  });
+  timestampField.value = currentTimestamp;
+});
+
+//thank you page
+document.addEventListener("DOMContentLoaded", function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const formDataDiv = document.getElementById("form-data");
+  const requiredFields = ["First Name", "Last Name", "Organizational Title", "Mobile Phone", "E-mail", "Business/organization's Name", "You joined at"];
+
+  let formDataHTML = "<h2>Your Data</h2><ul><br>";
+  urlParams.forEach((value, key) => {
+    if (requiredFields.includes(key)) {
+      formDataHTML += `<li><span>${key}:</span> ${value}</li>`;
+    }
+      
+  });
+  formDataHTML += "</ul>";
+
+  formDataDiv.innerHTML = formDataHTML;
+});
+
+
+//spinner 
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector("form");
+  const loadingOverlay = document.getElementById("loading-overlay");
+
+  //orvaley hidden
+  loadingOverlay.style.display = "none";  
+
+  form.addEventListener("submit", function(event) {
+      event.preventDefault(); //stop form submission
+
+      //if invalid form, do nothing
+      if (!form.checkValidity()) {
+          return;
+      }
+
+      //show overlay spinner before sending the form
+      loadingOverlay.style.display = "flex";
+
+      //simulate a 2 second loading time
+      setTimeout(() => {
+          loadingOverlay.style.display = "none"; //hide overlay
+          form.submit(); //send form
+      }, 2000);
+  });
+});

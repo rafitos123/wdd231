@@ -19,7 +19,10 @@ body {
 
 main {
   flex: 1;
+
 }
+
+
 
 
 header {
@@ -211,6 +214,179 @@ span {
   border-radius: 10%;
 }
 
+main h1 {
+  text-align: center;
+  margin: 20px;
+  font-size: 50px;
+}
+
+/* form */
+input[type=text], input[type=email], input[type=tel], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  animation: colorChange 3s forwards;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #007BFF;
+  }
+  50% {
+    background-color: #0056b3;
+  }
+  100% {
+    background-color: #007BFF;
+  }
+}
+
+/*input[type=submit]:hover {
+  background-color: #45a049;
+}*/
+
+/*thank you page*/
+#form-data {
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+	text-align: justify;
+	margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  margin: auto;
+}
+
+#form-data li{
+  list-style: none;
+}
+
+form {
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+section .card {
+  padding: 10px 20px;
+  width: 90%;
+  text-align: center;
+  background-color:#0e5d64;
+  color: white;
+  transform: translateY(50px);
+  animation: fadeInUp 3s forwards;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+section h2 {
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* MODALS */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+}
+
+.modal {
+  padding: 1em;
+  max-width: 50ch;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.5);
+}
+
+:modal {
+  background-color: beige;
+  border-radius: 10px;
+  border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+dialog {
+  text-align: justify;
+}
+
+/* spinner */
+/* Oculta o spinner por padrão */
+.hidden {
+  display: none;
+}
+
+/* Fundo escuro transparente cobrindo toda a tela */
+#loading-overlay {
+  display: none; /* Garante que o overlay inicie oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* O próprio spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgb(255, 255, 255);
+  border-top-color: rgb(54, 135, 233);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 @media (min-width: 768px) {
   #menu {
       display: none;
@@ -301,5 +477,41 @@ span {
     left: 22%;
     border-radius: 10%;
   }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 100px;
+  }
+
+  section .card {
+    padding: 10px 20px;
+    width: 90%;
+    text-align: center;
+    background-color:#0e5d64;
+    color: white;
+    transform: translateY(50px);
+    animation: fadeInUp 3s forwards;
+  }
+
+  section h2 {
+    text-align: center;
+  }
+
+  /*thank you page*/
+  #form-data {
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: justify;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    margin: auto;
+  }
+  
 }
 

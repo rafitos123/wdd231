@@ -15,7 +15,7 @@
         rel="stylesheet">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Mogi Mirim - Chamber of Commerce Directory Page" />
+    <meta property="og:title" content="Mogi Mirim - Chamber of Commerce Join Page" />
     <meta property="og:type" content="website" />
     <meta property="og:image"
         content="https://mediaim.expedia.com/destination/1/7531b3378e6edd3f3ddca8e27e85076f.jpg" />
@@ -42,39 +42,79 @@
         </nav>
     </header>
     <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/mirim.webp" media="(min-width: 1000px)">
-                <source srcset="images/mirim.webp" media="(min-width: 550px)">
-                <img src="images/mirim.webp" alt="Mogi Mirim city">
-            </picture>
+        <h1> Join here!</h1>
+            <section>
 
-        <h1>Welcome! Please join with <br> us in this city</h1><br>
-        <input type="button" value="Join Now" class="button">
-       
-        </div>
-        <div id="events">
-            <div class="card">
-                <h1>Events</h1>
-                <p><span>Festival of Flowers and Colors:</span> An annual event where the city transforms into a sea of
-                    flowers and colors. Public and private gardens compete for the title of "Most Beautiful Garden," and
-                    there are parades of flower-decorated floats, gardening workshops, and floral art exhibitions.</p>
-            </div>
-            <div class="card">
-                <h1>Weather</h1>
-                <div id="current-weather"></div>
-            </div>
-            <div class="card">
-                <h1>Weather Forecast</h1>
-                <div id="weather-forecast"></div>
-            </div>
+            
+               <div>
+                <form method="GET" action="thankyou.html">
+                    <label>First Name</label>
+                    <input type="text"  name="First Name" title="First Name" required autocomplete="given-name">
 
+                    <label>Last Name</label>
+                    <input type="text"  name="Last Name" title="Last Name" required autocomplete="family-name">
 
-        </div>
-        <div>
-            <div id="directory"></div>
-        </div>
+                    <label>Organizational Title</label>
+                    <input type="text" name="Organizational Title" required autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" title="Organizational Title">
 
+                    <label>E-mail</label>
+                    <input type="email" name="E-mail" title="E-mail" required placeholder="example@gmail.com" autocomplete="email">
+
+                    <label>Mobile Phone</label>
+                    <input type="tel" name="Mobile Phone" title="Phone Number" required autocomplete="tel">
+
+                    <label>Business/organization's Name</label>
+                    <input type="text" name="Business/organization's Name" title="Organizational Name" required autocomplete="organization">
+                
+                    <label >Membership Level</label>
+                    <select  name="Membership">
+                      <option>...</option>
+                      <option>NP Membership</option>
+                      <option>Bronze Membership</option>
+                      <option>Silver Membership</option>
+                      <option>Gold Membership</option>
+                    </select>
+                    <label>Business/organization's Description</label>
+                    <textarea name="Description" title="Business Description"></textarea>
+                    <input type="hidden" id="timestamp" name="You joined at">
+                    <input type="submit" value="Join">
+                    <div id="loading-overlay" class="hidden">
+                        <div class="spinner"></div>
+                    </div>
+                  </form>
+               </div>
+               
+                  <div>
+                    <h2>Membership Levels</h2>
+                    <div class="card">
+                        <h3>Bronze Level</h3>
+                        <input type="submit" value="Benefits" class="open-button" data-modal="modal">
+                    </div>
+                    <dialog class="modal" id="modal">
+                        <h2>Bronze</h2><br>
+                        <P>With the Bronze level, businesses have access to networking events and workshops, as well as being listed in the Chamber of Commerce directory. This level is ideal for small businesses that are just starting and want to increase their visibility in the local community. Additionally, Bronze members receive monthly newsletters with updates on events and business opportunities in the region.</P>
+                        <button class="close-button">❌</button>
+                    </dialog>
+                    <div class="card">
+                        <h3>Silver Level</h3>
+                        <input type="submit" value="Benefits" class="open-button" data-modal="modal2">
+                    </div>
+                    <dialog class="modal" id="modal2">
+                        <h2>Silver</h2><br>
+                        <P>The Silver level includes all the benefits of Bronze, plus featured advertising at events and on the Chamber's website, and access to specialized consulting services. Silver businesses also have the opportunity to participate in local fairs and exhibitions with exclusive discounts. This level is perfect for businesses looking to expand their market presence and connect with other professionals in the area.</P>
+                        <button class="close-button">❌</button>
+                    </dialog>
+                    <div class="card">
+                        <h3>Gold Level</h3>
+                        <input type="submit" value="Benefits" class="open-button" data-modal="modal3">
+                    </div>
+                    <dialog class="modal" id="modal3">
+                        <h2>Gold</h2><br>
+                        <P>The Gold level offers all the benefits of the previous levels, plus exclusive sponsorship opportunities, participation in leadership committees, and greater visibility in the city's marketing campaigns. Gold members also have priority access to high-level events and can influence important decisions within the Chamber of Commerce. This level is ideal for established businesses seeking a leadership role in the Mogi Mirim business community.</P>
+                        <button class="close-button">❌</button>
+                    </dialog>
+                </div>
+            </section>
     </main>
     <footer>
         <div>
