@@ -224,3 +224,34 @@ if (showInfo) {
   console.error("Element with ID 'form-data' not found.");
 }
 
+function displayVisitMessage() {
+  const visitElement = document.getElementById("visits");
+  const lastVisit = localStorage.getItem("lastVisit");
+  const currentTime = new Date().getTime();
+
+  if (!visitElement) {
+      console.error("Elemento #visits não encontrado no HTML!");
+      return;
+  }
+
+  if (!lastVisit) {
+      // Primeira visita
+      visitElement.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+      const lastVisitTime = parseInt(lastVisit, 10);
+      const timeDiff = currentTime - lastVisitTime;
+      const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+      if (daysDiff < 1) {
+          visitElement.textContent = "Back so soon! Awesome!";
+      } else {
+          visitElement.textContent = `You last visited ${daysDiff} ${daysDiff === 1 ? "day" : "days"} ago.`;
+      }
+  }
+
+  // Atualiza o timestamp da última visita no localStorage
+  localStorage.setItem("lastVisit", currentTime);
+}
+
+// Garante que o script seja executado após o DOM estar totalmente carregado
+document.addEventListener("DOMContentLoaded", displayVisitMessage);

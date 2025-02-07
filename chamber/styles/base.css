@@ -145,6 +145,7 @@ nav .navigation {
   text-align: center;
 }
 
+
 .card h1 {
   background-color: #005b64;
   color: white;
@@ -351,7 +352,26 @@ dialog {
   text-align: justify;
 }
 
+button {
+  background-color: #005b64;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+.card2 {
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+  text-align: justify;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 20px;
+  padding: 8px;
+  gap: 10px;
+
+}
 
 @media (min-width: 768px) {
   #menu {
@@ -478,6 +498,92 @@ dialog {
     color: white;
     margin: auto;
   }
+
+  .card2 {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+    text-align: justify;
+    display: grid;
+    gap: 10px;
+    margin: 8px;
+    padding: 8px;
+  }
+
+  .area-container{
+    display: grid;
+    grid-template-areas:
+      "one two three four"
+      "five six seven eight";
+    gap: 5px;
+    padding: 10px;
+  }
+
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
   
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  #menu {
+      display: none;
+  }
+
+  nav .navigation {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background-color: transparent;
+  justify-content: center;
+  }
+
+  .navigation li {
+      margin: 0 10px;
+  }
+
+  .navigation a {
+      padding: 0.5rem 1rem;
+      color: white;
+      
+  }
+
+  .navigation a:hover {
+      background-color: transparent;
+      color: #EDF6F9;
+      border-bottom: 2px solid #EDF6F9;
+  }
+
+  .card2 {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+    text-align: justify;
+    display: grid;
+    gap: 10px;
+    margin: 8px;
+    padding: 8px;
+  }
+
+  .area-container{
+    display: grid;
+    grid-template-areas:
+      "one two" 
+      "three four"
+      "five six" 
+      "seven eight";
+    gap: 5px;
+    padding: 10px;
+  }
+
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+  
+}
