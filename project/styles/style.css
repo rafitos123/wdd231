@@ -1,0 +1,273 @@
+* {
+    font-family: poppins, system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1;
+  
+  }
+
+  /*
+  header {
+    color: black;
+    background-color: #6B9080;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+ */
+
+
+  #navbar {
+    background-color: #9C89B8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: top 0.3s;
+    z-index: 10;
+  }
+
+  nav img{
+    margin: 10px;
+   }
+  
+
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    right: 10px;
+    z-index: 20;
+  }
+  
+  /* Altera o ícone ao clicar */
+  #menu.active::before {
+    content: "X";
+  }
+  
+  #menu::before {
+    content: "≡";
+  }
+  
+  /* Navegação (Mobile por padrão) */
+  nav .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #B8BEDD;
+    z-index: 9;
+    text-align: center;
+    
+  }
+  
+  
+  .navigation.show {
+    display: flex;
+  }
+  
+  
+  .navigation li {
+    list-style: none;
+  }
+  
+  .navigation a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    justify-content: center;
+    
+  }
+  
+  .navigation a:hover {
+    background-color: #F0E6EF;
+    color: black;
+  }
+
+
+  .parallax {
+    /* The image used */
+    background-image: url("/project/images/hero.webp");
+  
+    /* Set a specific height */
+    min-height: 300px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  .content img {
+    width: 200px;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns:  1fr 1fr;;
+    margin: 30px;
+    gap: 30px;
+    opacity: 0;
+  }
+
+  .content.show {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+  span {
+    color: #9C89B8;
+    font-weight: bold;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 60px;
+  }
+
+
+
+  footer {
+    background-color: #9C89B8;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+  
+  }
+  footer span {
+    color: black;
+    font-weight: none;
+  }
+
+  .hero {
+    display: none;
+
+  }
+
+  @media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    .hero {
+      color: white;
+      font-size: 40px;
+      position: absolute;
+      text-align: center;
+      top: 10%;
+      left: 25%;
+      text-shadow: rgb(167, 167, 167) 2px 5px;
+
+    }
+  
+    nav .navigation {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    justify-content: center;
+    }
+  
+    .navigation li {
+        margin: 0 10px;
+    }
+  
+    .navigation a {
+        padding: 0.5rem 1rem;
+        color: black;
+        
+    }
+  
+    .navigation a:hover {
+        background-color: transparent;
+        color: #EDF6F9;
+        border-bottom: 2px solid #EDF6F9;
+    }
+
+    .parallax {
+      /* The image used */
+      background-image: url("/project/images/hero.webp");
+    
+      /* Set a specific height */
+      min-height: 700px; 
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .content img {
+      width: 500px;
+    }
+  
+    .content {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      margin: 100px;
+      font-size: 2rem;
+      gap: 100px;
+    }
+  
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      margin: 60px;
+    }
+  
+
+    footer {
+      background-color: #9C89B8;
+      color: black;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      align-items: center;
+      gap: 200px; 
+    }
+
+    footer span {
+      color: black;
+      font-weight: none;
+    }
+  }  
