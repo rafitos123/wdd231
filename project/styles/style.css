@@ -156,7 +156,7 @@ main {
 
 
   span {
-    color: #9C89B8;
+    color: #63517c;
     font-weight: bold;
   }
 
@@ -169,7 +169,7 @@ main {
 
 
   footer {
-    background-color: #9C89B8;
+    background-color: #a994c8;
     color: black;
     text-align: center;
     padding: 10px 0;
@@ -183,6 +183,71 @@ main {
   .hero {
    display: none;
   }
+
+  /* Form */
+  .gradient {
+    background: linear-gradient(115deg, #B8BEDD 10%, #F0A6CA 90%);
+  }
+
+  input[type=text], input[type=email], input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, select:focus {
+    border-color: #9C89B8;
+    box-shadow: 0 0 10px rgba(125, 76, 175, 0.5);
+}
+
+input[type=submit] {
+    width: 100%;
+    background: linear-gradient(115deg, #B8BEDD 10%, #F0A6CA 90%);
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.05);
+}
+
+input[type=submit]:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+div form {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    margin: 100px auto 100px ;
+}
+
+form h1{
+  font-size: 20px;
+}
+
+div form:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
   
 
   @media (min-width: 768px) {
@@ -261,7 +326,7 @@ main {
   
 
     footer {
-      background-color: #9C89B8;
+      background-color: #a994c8;
       color: black;
       display: flex;
       justify-content: space-around;
@@ -274,4 +339,19 @@ main {
       color: black;
       font-weight: none;
     }
+
+    div form {
+      border-radius: 5px;
+      background-color: white;
+      padding: 20px;
+      margin-top: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      width: 600px;
+      margin: 100px auto 100px ;
+  }
+  form h1{
+    font-size: x-large;
+  }
+  
   }  

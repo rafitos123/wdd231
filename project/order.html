@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/ico" sizes="16x16"  href="images/favicon.ico">
+    <title>Everest Home Page</title>
+</head>
+<body>
+    <header>
+        
+
+        <a id="menu" href="#"></a>
+
+        <nav   id="navbar">
+            <a href="#" class=".item2"><img src="images/logo.webp" alt="logo" width="50"></a>
+            <ul class="navigation" >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Smartphone</a></li>
+                <li><a href="#">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main  class="gradient">
+        <div>
+            <form action="">
+                <h1>Order your Smartphone</h1>
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name.." required autocomplete="given-name">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.." autocomplete="family-name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required autocomplete="email">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+              
+          
+              <label for="country">Smartphone</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            
+              <input type="submit" value="Order now!">
+            </form>
+          </div>
+    </main>
+    <footer>
+        <footer>
+                <div>
+                    <p>Copyright&copy;<span id="currentyear"></span> Everest.</p>
+                    <p id="lastModified"></p>
+                </div>
+                <div>
+                    <a href="#"> <img width="50" height="50" src="images/instagram.webp" alt="instagram" /></a>
+                    <a href="#"><img width="50" height="50" src="images/facebook.webp" alt="facebook" /></a>
+                    <a href="#"><img width="50" height="50" src="images/x.webp" alt="X" /></a>
+                </div>
+                <div>
+                    <p>Mogi Mirim, Brazil</p>
+                    <p>655, Thomas Marsh Avenue</p>
+                    <p>everest@mobile.com</p>
+                    <p>+55 19 99999-9999</p>
+                </div>
+        </footer>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
