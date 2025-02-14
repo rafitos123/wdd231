@@ -1,0 +1,40 @@
+{
+    "smartphones": [
+        {
+            "name": "Everest Summit X1",
+            "price": "$799.90",
+            "features": "6.9-inch AMOLED display, Solar and Kinetically Chargeable Battery, 108MP Spatial Zoom Camera, Holographic AI Assistant, 256GB internal storage",
+            "image": "images/smartphone1.webp"
+        },
+        {
+            "name": "Everest Peak Pro",
+            "price": "$859.80",
+            "features": "7.2-inch Self-Healing Flexible Display, Liquid Cooling System, Olfactory Recognition, Projection Keyboard and Screen, 512GB internal storage",
+            "image": "images/smartphone2.webp"
+        },
+        {
+            "name": "Everest Alpine Max",
+            "price": "$674.50",
+            "features": "6.8-inch Curved Edge Infinity Display, Advanced Augmented Reality Technology, 40MP Front Camera with LED Flash, 5000mAh Fast Charging Battery, 128GB internal storage",
+            "image": "images/smartphone3.webp"
+        },
+        {
+            "name": "Everest Glacier Elite",
+            "price": "$995.50",
+            "features": "7.0-inch 4K HDR display, Quantum Connection, Emotion and Well-Being Recognition, Stereo Speakers with Spatial Audio, 1TB internal storage",
+            "image": "images/smartphone4.webp"
+        },
+        {
+            "name": "Everest Ridge Neo",
+            "price": "$825.70",
+            "features": "6.5-inch OLED display, 64MP Triple Camera with Night Mode, Health Monitoring Sensors, Ultra-thin and Lightweight Design, 256GB internal storage",
+            "image": "images/smartphone5.webp"
+        },
+        {
+            "name": "Everest Horizon Ultra",
+            "price": "$899.99",
+            "features": "6.7-inch Super AMOLED display, 6000mAh Battery with Wireless Charging, 8K High-Definition Camera, Custom Operating System, 512GB internal storage",
+            "image": "images/smartphone6.webp"
+        }
+    ]
+}
