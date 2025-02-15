@@ -142,9 +142,6 @@ getSmartphones();
 
 
 //directory 2 home page
-
-
-
 const cards2 = document.querySelector('#directory2');
 
 async function getRandom() {
@@ -153,7 +150,7 @@ async function getRandom() {
         const data = await response.json();
         console.table(data.smartphones);
 
-        // Seleciona 4 smartphones aleatórios
+        // Select 4 random smartphones
         const randomSmartphones = getRandomSmartphones(data.smartphones, 4);
         displaySmartphones(randomSmartphones);
     } catch (error) {
@@ -161,16 +158,16 @@ async function getRandom() {
     }
 }
 
-// Função para obter 4 smartphones aleatórios
+// Function to select 4 random smartphones
 function getRandomSmartphones(smartphones, count) {
-    return [...smartphones] // Cria uma cópia para evitar modificar a lista original
-        .sort(() => 0.5 - Math.random()) // Embaralha os itens
-        .slice(0, count); // Seleciona os primeiros 4 elementos
+    return [...smartphones] 
+        .sort(() => 0.5 - Math.random()) 
+        .slice(0, count);
 }
 
-// Função para exibir os smartphones na tela
+
 const displaySmartphones = (smartphones) => {
-    cards2.innerHTML = ''; // Limpa os cards anteriores antes de adicionar novos
+    cards2.innerHTML = ''; 
 
     smartphones.forEach(smartphone2 => {
         const card = document.createElement("div");
@@ -201,12 +198,34 @@ const displaySmartphones = (smartphones) => {
     });
 }
 
-// Chamar a função principal para exibir os smartphones aleatórios
 getRandom();
 
+//form select
+document.addEventListener("DOMContentLoaded", function() {
+    const select = document.getElementById("smartphone");
+
+    fetch(linksURL)
+        .then(response => response.json())
+        .then(data => {
+            select.innerHTML = ""; 
+            
+            data.smartphones.forEach(smartphone => {
+                let option = document.createElement("option");
+                option.value = smartphone.name;
+                option.textContent = smartphone.name;
+                select.appendChild(option);
+            });
+        })
+
+       
+    })
+    .catch(error => {
+        console.error("Error to load smartphones:", error);
+        select.innerHTML = "<option value=''>Error to load smartphones</option>";
+    });
+      
 
 //chatbot API
-
 //MODALS
 const modal = document.querySelector("#modal");
 const openModal = document.querySelector(".open-button");
@@ -259,3 +278,37 @@ async function sendMessage() {
     chatbox.innerHTML += `<div><span>Everest Bot:</span> ${botMessage}</div>`;
     chatbox.scrollTop = chatbox.scrollHeight; 
 }
+
+
+//local Storage 
+function displayVisitMessage() {
+    const visitElement = document.getElementById("visits");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const currentTime = new Date().getTime();
+
+    if (!visitElement) {
+        console.error("Elemento #visits não encontrado no HTML!");
+        return;
+    }
+
+    if (!lastVisit) {
+        // Primeira visita
+        visitElement.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        const lastVisitTime = parseInt(lastVisit, 10);
+        const timeDiff = currentTime - lastVisitTime;
+        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+        if (daysDiff < 1) {
+            visitElement.textContent = "Back so soon!";
+        } else {
+            visitElement.textContent = `You last visited ${daysDiff} ${daysDiff === 1 ? "day" : "days"} ago.`;
+        }
+    }
+
+    // Atualiza o timestamp da última visita no localStorage
+    localStorage.setItem("lastVisit", currentTime);
+}
+
+// Garante que o script seja executado após o DOM estar totalmente carregado
+document.addEventListener("DOMContentLoaded", displayVisitMessage);

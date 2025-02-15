@@ -243,7 +243,7 @@ function displayVisitMessage() {
       const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
       if (daysDiff < 1) {
-          visitElement.textContent = "Back so soon! Awesome!";
+          visitElement.textContent = "Back so soon!";
       } else {
           visitElement.textContent = `You last visited ${daysDiff} ${daysDiff === 1 ? "day" : "days"} ago.`;
       }

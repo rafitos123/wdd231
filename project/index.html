@@ -27,6 +27,11 @@
         </nav>
     </header>
     <main>
+        <div class="alert" id="alertBox">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Hey!
+            <p id="visits"></p>
+        </div>
         <h1 class="hero">EVEREST - NEW WAYS TO CLIMB</h1>
         <div class="parallax"></div>
         <h1>WHAT IS INNOVATIVE?</h1>
@@ -51,9 +56,9 @@
         </dialog>
         <div id="directory2" ></div>
         <form action="smartphone.html" class="formHome"><input type="submit" value="See More"></form>
+        
     </main>
     <footer>
-        <footer>
                 <div>
                     <p>Copyright&copy;<span id="currentyear"></span> Everest.</p>
                     <p id="lastModified"></p>
@@ -69,7 +74,6 @@
                     <p>everest@mobile.com</p>
                     <p>+55 19 99999-9999</p>
                 </div>
-        </footer>
     </footer>
     <script src="scripts/script.js"></script>
 </body>

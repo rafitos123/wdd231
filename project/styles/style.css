@@ -244,6 +244,8 @@ button {
     outline: none;
 }
 
+
+
 input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, select:focus {
     border-color: #9C89B8;
     box-shadow: 0 0 10px rgba(125, 76, 175, 0.5);
@@ -293,7 +295,7 @@ div form:hover {
 }
 
 .formHome{
-  width: 10%;
+  width: 30%;
   margin: 0 auto 200px;
   
 }
@@ -379,7 +381,33 @@ div form:hover {
   text-align: center;
   background-color: white;
 }
-  
+
+/* alert localStorage */
+.alert {
+  padding: 20px;
+  background-color: #63517c;
+  color: white;
+  position: absolute;
+  top: 30%;
+  margin-left: 20px;
+  opacity: 0.8;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
 
   @media (min-width: 768px) {
     #menu {
