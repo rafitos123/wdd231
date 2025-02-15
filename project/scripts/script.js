@@ -91,7 +91,7 @@ async function getSmartphones() {
 
         //smartphone name and price
         name.textContent = smartphone.name;
-        price.textContent = `Price: ${smartphone.price}`;
+        price.textContent = `${smartphone.price}`;
 
 
         //modal
