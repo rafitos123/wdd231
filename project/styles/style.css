@@ -166,8 +166,8 @@ main {
 
 button {
     padding: 10px;
-    background: blue;
-    color: white;
+    background: #F0A6CA;
+    color: black;
     border: none;
     cursor: pointer;
 }
