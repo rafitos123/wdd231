@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/ico" sizes="16x16"  href="images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=forum" />
     <title>Everest Home Page</title>
 </head>
 <body>
@@ -19,14 +20,14 @@
         <nav   id="navbar">
             <a href="#" class=".item2"><img src="images/logo.webp" alt="logo" width="50"></a>
             <ul class="navigation" >
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Smartphone</a></li>
-                <li><a href="#">Order</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="smartphone.html">Smartphone</a></li>
+                <li><a href="order.html">Order</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1 class="hero">EVEREST - NEW WAYS TO PROGRESS</h1>
+        <h1 class="hero">EVEREST - NEW WAYS TO CLIMB</h1>
         <div class="parallax"></div>
         <h1>WHAT IS INNOVATIVE?</h1>
         <div class="content">
@@ -35,7 +36,17 @@
             <p><span>Olfactory Recognition:</span> Sensors that can detect and recognize smells, allowing the device to identify the environment and even alert the user to potential dangers, such as smoke or gas.</p>
             <img src="images/second.webp" alt="Everest Mobile" loading="lazy">
         </div>
-
+        <div>
+            <button data-modal="modal" class="btn open-button" ><img src="images/chat.webp" alt="chat"></button>
+        </div>
+        <dialog class="modal" id="modal">
+            <div class="chat-container">
+                <div id="chatbox"></div>
+                <input type="text" id="user-input" placeholder="Ask your question...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+            <button class="close-button">❌</button>
+        </dialog>
     </main>
     <footer>
         <footer>

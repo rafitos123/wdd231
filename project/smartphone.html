@@ -19,15 +19,25 @@
         <nav   id="navbar">
             <a href="#" class=".item2"><img src="images/logo.webp" alt="logo" width="50"></a>
             <ul class="navigation" >
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Smartphone</a></li>
-                <li><a href="#">Order</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="smartphone.html">Smartphone</a></li>
+                <li><a href="order.html">Order</a></li>
             </ul>
         </nav>
     </header>
     <main>
-     <div id="directory"></div>
-
+        <div id="directory"></div>
+        <div>
+            <button data-modal="modal" class="btn open-button" ><img src="images/chat.webp" alt="chat"></button>
+        </div>
+        <dialog class="modal" id="modal">
+            <div class="chat-container">
+                <div id="chatbox"></div>
+                <input type="text" id="user-input" placeholder="Ask your question...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+            <button class="close-button">❌</button>
+        </dialog>
     </main>
     <footer>
         <footer>
