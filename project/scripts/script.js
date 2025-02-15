@@ -162,7 +162,7 @@ document.querySelectorAll('.close-button').forEach(button => {
   });
 });
 
-const apiKey = "AIzaSyAfGN9EJih0sdHUMg-4_HOOGvRR4VMg3u8";  // 🔑 Substitua pela sua chave real
+const apiKey = "AIzaSyAfGN9EJih0sdHUMg-4_HOOGvRR4VMg3u8"; 
 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
 
 async function sendMessage() {
