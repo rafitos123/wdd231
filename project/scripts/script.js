@@ -215,18 +215,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 option.textContent = smartphone.name;
                 select.appendChild(option);
             });
-        })
+        }).catch(error => {
+            console.error("Error to load smartphones:", error);
+            select.innerHTML = "<option value=''>Error to load smartphones</option>";
+        });
 
        
     })
-    .catch(error => {
-        console.error("Error to load smartphones:", error);
-        select.innerHTML = "<option value=''>Error to load smartphones</option>";
-    });
+    
       
 
 //chatbot API
 //MODALS
+
+
+
+
+
 const modal = document.querySelector("#modal");
 const openModal = document.querySelector(".open-button");
 const closeModal = document.querySelector(".close-button");
@@ -246,12 +251,15 @@ document.querySelectorAll('.close-button').forEach(button => {
   });
 });
 
+
+
 const apiKey = "AIzaSyAfGN9EJih0sdHUMg-4_HOOGvRR4VMg3u8"; 
 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
 
 async function sendMessage() {
     const userInput = document.getElementById("user-input");
     const chatbox = document.getElementById("chatbox");
+
 
     let userMessage = userInput.value;
     if (!userMessage) return;
