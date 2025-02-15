@@ -54,7 +54,6 @@ async function getSmartphones() {
     try {
         const response = await fetch(linksURL);
         const data = await response.json();
-        console.table(data.smartphones);
         displayLinks(data.smartphones); 
     } catch (error) {
         console.error("Erro ao buscar os smartphones:", error);
@@ -148,7 +147,7 @@ async function getRandom() {
     try {
         const response = await fetch(linksURL);
         const data = await response.json();
-        console.table(data.smartphones);
+        
 
         // Select 4 random smartphones
         const randomSmartphones = getRandomSmartphones(data.smartphones, 4);
