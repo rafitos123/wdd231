@@ -140,6 +140,71 @@ async function getSmartphones() {
 
 getSmartphones();
 
+
+//directory 2 home page
+
+
+
+const cards2 = document.querySelector('#directory2');
+
+async function getRandom() {
+    try {
+        const response = await fetch(linksURL);
+        const data = await response.json();
+        console.table(data.smartphones);
+
+        // Seleciona 4 smartphones aleatórios
+        const randomSmartphones = getRandomSmartphones(data.smartphones, 4);
+        displaySmartphones(randomSmartphones);
+    } catch (error) {
+        console.error("Erro ao carregar os smartphones:", error);
+    }
+}
+
+// Função para obter 4 smartphones aleatórios
+function getRandomSmartphones(smartphones, count) {
+    return [...smartphones] // Cria uma cópia para evitar modificar a lista original
+        .sort(() => 0.5 - Math.random()) // Embaralha os itens
+        .slice(0, count); // Seleciona os primeiros 4 elementos
+}
+
+// Função para exibir os smartphones na tela
+const displaySmartphones = (smartphones) => {
+    cards2.innerHTML = ''; // Limpa os cards anteriores antes de adicionar novos
+
+    smartphones.forEach(smartphone2 => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const container = document.createElement("div");
+        container.classList.add("container");
+
+        const image = document.createElement('img');
+        const name = document.createElement("h3");
+        const price = document.createElement("span");
+
+        image.setAttribute('src', smartphone2.image);
+        image.setAttribute('alt', `The ${smartphone2.name}`);
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('width', '300');
+        image.setAttribute('height', '300');
+
+        name.textContent = smartphone2.name;
+        price.textContent = `${smartphone2.price}`;
+
+        container.appendChild(image);
+        container.appendChild(name);
+        container.appendChild(price);
+
+        card.appendChild(container);
+        cards2.appendChild(card);
+    });
+}
+
+// Chamar a função principal para exibir os smartphones aleatórios
+getRandom();
+
+
 //chatbot API
 
 //MODALS

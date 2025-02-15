@@ -113,11 +113,7 @@ main {
 
 
   .parallax {
-    /* The image used */
     background-image: url("../images/hero.webp");
-
-  
-    /* Set a specific height */
     min-height: 300px; 
   
     /* Create the parallax scrolling effect */
@@ -296,6 +292,12 @@ div form:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.formHome{
+  width: 10%;
+  margin: 0 auto 200px;
+  
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -360,6 +362,22 @@ div form:hover {
   gap: 30px;
   margin: 200px 100px 100px;
   justify-content: center;
+}
+
+#directory2 {
+  display: grid;
+  grid-template-columns:  1fr;
+  gap: 30px;
+  margin: 200px 100px 100px;
+  justify-content: center;
+}
+
+#directory2 .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 250px;
+  text-align: center;
+  background-color: white;
 }
   
 
@@ -473,6 +491,14 @@ div form:hover {
     gap: 30px;
     margin: 200px 100px 100px;
     justify-content: center;
+  }
+
+  #directory2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    justify-content: center;
+    
   }
 
   .modal {

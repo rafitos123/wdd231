@@ -35,6 +35,62 @@
             "price": "$899.99",
             "features": "6.7-inch Super AMOLED display, 6000mAh Battery with Wireless Charging, 8K High-Definition Camera, Custom Operating System, 512GB internal storage",
             "image": "images/smartphone6.webp"
+        },
+        {
+            "name": "Everest Summit Pro",
+            "price": "$959.99",
+            "features": "6.8-inch AMOLED display, 5000mAh Battery with Fast Charging, 108MP Quad Camera System, Holographic AI Assistant, 256GB internal storage",
+            "image": "images/smartphone7.webp"
+        },
+        {
+            "name": "Everest Peak Xtreme",
+            "price": "$922.90",
+            "features": "6.9-inch Curved Edge OLED display, Solar and Kinetically Chargeable Battery, 128MP Dual Camera with Night Vision, Liquid Cooling System, 512GB internal storage",
+            "image": "images/smartphone8.webp"
+        },
+        {
+            "name": "Everest Titan",
+            "price": "$1010",
+            "features": "7.5-inch Foldable Super AMOLED display, 6000mAh Battery with Wireless Charging, 64MP Triple Camera with Ultra-Wide Lens, Advanced Augmented Reality Technology, 1TB internal storage",
+            "image": "images/smartphone9.webp"
+        },
+        {
+            "name": "Everest Elite S",
+            "price": "$600.50",
+            "features": "6.7-inch HDR10+ display, 4500mAh Battery with Ultra-Fast Charging, 50MP Penta Camera System with Macro Lens, Emotion and Well-Being Recognition, 256GB internal storage",
+            "image": "images/smartphone10.webp"
+        },
+        {
+            "name": "Everest Infinity",
+            "price": "$1000.50",
+            "features": "7.0-inch 4K Infinity Display, 7000mAh Battery with Adaptive Charging, 100MP Hexa Camera System, Projection Keyboard and Screen, 512GB internal storage",
+            "image": "images/smartphone11.webp"
+        },
+        {
+            "name": "Everest Quantum",
+            "price": "$599",
+            "features": "6.6-inch Quantum Dot display, 5500mAh Battery with Solar Charging, 128MP Dual Camera with 8K Video Recording, Quantum Connection, 128GB internal storage",
+            "image": "images/smartphone12.webp"
+        },
+        {
+            "name": "Everest Zen",
+            "price": "$523.80",
+            "features": "6.5-inch OLED display with Eye Protection, 5000mAh Battery with Smart Charging, 48MP Dual Camera with AI Enhancement, Health Monitoring Sensors, 256GB internal storage",
+            "image": "images/smartphone13.webp"
+        },
+        {
+            "name": "Everest Lux",
+            "price": "$955.80",
+            "features": "6.8-inch Super AMOLED display, 6500mAh Battery with Wireless Fast Charging, 108MP Triple Camera with Optical Zoom, Customizable Operating System, 512GB internal storage",
+            "image": "images/smartphone14.webp"
+        },
+        {
+            "name": "Everest Aurora",
+            "price": "$610.50",
+            "features": "6.9-inch Edge-to-Edge display, 5500mAh Battery with Ultra-Power Saver Mode, 64MP Dual Camera with Low-Light Optimization, Self-Healing Flexible Screen, 128GB internal storage",
+            "image": "images/smartphone15.webp"
         }
+
+
     ]
 }
