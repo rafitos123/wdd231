@@ -185,15 +185,16 @@ button {
 }
 
   .content img {
-    width: 200px;
+    width: 150px;
   }
 
   .content {
     display: grid;
     grid-template-columns:  1fr 1fr;;
-    margin: 30px;
-    gap: 30px;
+    margin: 10px;
+    gap: 50px;
     opacity: 0;
+    font-size: 80%;
   }
 
   .content.show {
