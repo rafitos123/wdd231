@@ -226,11 +226,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //chatbot API
 //MODALS
-
-
-
-
-
 const modal = document.querySelector("#modal");
 const openModal = document.querySelector(".open-button");
 const closeModal = document.querySelector(".close-button");
@@ -251,23 +246,24 @@ document.querySelectorAll('.close-button').forEach(button => {
 });
 
 
-
+//Setting the API Key and API URL:
 const apiKey = "AIzaSyAfGN9EJih0sdHUMg-4_HOOGvRR4VMg3u8"; 
 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
 
+//Function to send a message to the chatbot:
 async function sendMessage() {
     const userInput = document.getElementById("user-input");
     const chatbox = document.getElementById("chatbox");
 
-
+    //obtain the user message
     let userMessage = userInput.value;
     if (!userMessage) return;
 
-    // Exibir a mensagem do usuário
+    //show the user message in the chatbox
     chatbox.innerHTML += `<div><span>You:</span> ${userMessage}</div><br>`;
     userInput.value = "";
 
-    // Configuração da requisição
+    //configure the request to the chatbot API
     const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
@@ -278,10 +274,12 @@ async function sendMessage() {
         })
     });
 
+    //processing the response from the chatbot API
+    //the response is converted to JSON format
     const data = await response.json();
     const botMessage = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Error getting response.";
 
-    // Exibir a resposta do bot
+    //show the answer from the bot in the chatbox
     chatbox.innerHTML += `<div><span>Everest Bot:</span> ${botMessage}</div>`;
     chatbox.scrollTop = chatbox.scrollHeight; 
 }
